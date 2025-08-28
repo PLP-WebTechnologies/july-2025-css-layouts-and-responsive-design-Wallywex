@@ -1,0 +1,230 @@
+/* -------------------
+   Global Styles
+-------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+section {
+  padding: 3rem 2rem;
+}
+
+/* -------------------
+   Header (Flexbox)
+-------------------- */
+.header {
+  display: flex;                  /* Flexbox for horizontal alignment */
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #222;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f4b400;
+}
+
+/* -------------------
+   Hero Section
+-------------------- */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #f4f4f4;
+}
+
+.hero h2 {
+  margin-bottom: 1rem;
+}
+
+/* -------------------
+   About Section (Flexbox)
+-------------------- */
+.about {
+  display: flex;                  /* Flexbox for two-column layout */
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;                /* Wrap on small screens */
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* -------------------
+   Services (Grid)
+-------------------- */
+.services .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #eaeaea;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: #ddd;
+}
+
+/* -------------------
+   Testimonials (Flexbox)
+-------------------- */
+.testimonials-container {
+  display: flex;                 /* Flexbox for side-by-side */
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;               /* Stack on smaller screens */
+  margin-top: 2rem;
+}
+
+.testimonial {
+  flex: 1;
+  min-width: 250px;
+  background: #fafafa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* -------------------
+   Contact Section
+-------------------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 2rem auto;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.contact-form button {
+  padding: 0.8rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #f4b400;
+  color: #222;
+}
+
+/* -------------------
+   Footer
+-------------------- */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: #fff;
+}
+
+/* -------------------
+   Responsive Design
+   Media Queries
+-------------------- */
+
+/* Medium devices (tablets) */
+@media (max-width: 900px) {
+  .services .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .services .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about {
+    flex-direction: column; /* Stack image below text */
+    text-align: center;
+  }
+}
+#font {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
